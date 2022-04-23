@@ -52,40 +52,40 @@ inquirer
   ])
   .then((data) => {
     
-    const userdata =
-        `# ${data.title}
+    const userdata = `
+# ${data.title}
     
-        ##Description
+##Description
     
-        ##Table of Contents
-        1. [Installation](#Installation)
-        2. [Usage](#Usage)
-        3. [License](#License)
-        4. [Contributing](#Contributing)
-        5. [Tests](#Test)
-        6. [Questions](#Questions)
+##Table of Contents
+    * [Installation](#Installation)
+    * [Usage](#Usage)
+    * [License](#License)
+    * [Contributing](#Contributing)
+    * [Tests](#Test)
+    * [Questions](#Questions)
     
-        ##Installation
+##Installation
         ${data.installation}
         
-        ##Usage
+##Usage
         ${data.usage}
     
-        ##License
+##License
         ${data.input}
     
-        ##Contributing
+##Contributing
         ${data.contributing}
     
-        ##Tests
+##Tests
         ${data.test}
     
-        ##Questions
+##Questions
         ${data.github}
         ${data.email}
         `;
 
-    fs.writeFile(data.title + 'README.md', userdata, (err) =>
+fs.writeFile(data.title + 'README.md', userdata, (err) =>
       err ? console.log(err) : console.log('Success!')
     );
   })
