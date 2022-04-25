@@ -15,6 +15,12 @@ inquirer
     },
     {
       type: 'input',
+      message: 'Table of Contents',
+      name: 'Table of Contents',
+      
+    },
+    {
+      type: 'input',
       name: 'installation',
       message: 'What are the installation instructions?',
     },
@@ -25,8 +31,8 @@ inquirer
     },
     {
       type: 'input',
-      name: 'contributing',
-      message: 'What are the contribution guidelines?',
+      name: 'contributor',
+      message: 'Who contributed to the project?',
     },
     {
       type: 'input',
@@ -58,32 +64,32 @@ inquirer
 ##Description
     
 ##Table of Contents
-    * [Installation](#Installation)
-    * [Usage](#Usage)
-    * [License](#License)
-    * [Contributing](#Contributing)
-    * [Tests](#Test)
-    * [Questions](#Questions)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Tests](#Test)
+* [Questions](#Questions)
     
 ##Installation
-        ${data.installation}
+${data.installation}
         
 ##Usage
-        ${data.usage}
+${data.usage}
     
 ##License
-        ${data.input}
+${data.input}
     
 ##Contributing
-        ${data.contributing}
+${data.contributing}
     
 ##Tests
-        ${data.test}
+${data.test}
     
 ##Questions
-        ${data.github}
-        ${data.email}
-        `;
+${data.github}
+${data.email}
+`;
 
 fs.writeFile(data.title + 'README.md', userdata, (err) =>
       err ? console.log(err) : console.log('Success!')
